@@ -3,7 +3,7 @@ Docker for Gophish
 
 ## Description
 
-A quicj docker deploy for [gophish](https://github.com/gophish/gophish).
+A quick docker deploy for [gophish](https://github.com/gophish/gophish).
 
 Docker uses Ubuntu Bionic
 
