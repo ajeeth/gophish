@@ -12,7 +12,7 @@ RUN mkdir /app
 ADD https://github.com/gophish/gophish/releases/download/$RELEASE/gophish-v$RELEASE-linux-64bit.zip /app/
 RUN unzip /app/gophish-v$RELEASE-linux-64bit.zip && rm /app/gophish-v$RELEASE-linux-64bit.zip
 WORKDIR /app
-RUN sed -i "s|127.0.0.1|0.0.0.0|g" config.json
+RUN cd /app && sed -i "s|127.0.0.1|0.0.0.0|g" config.json
 RUN sed -i "s|gophish.db|database/gophish.db|g" config.json
 RUN chmod +x ./gophish
 
