@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 MAINTAINER Ajeeth.Samuel@gmail.com
 
-ENV RELEASE 0.7.1
+ENV RELEASE v0.8.0
 
 RUN apt-get update && \
 	apt-get install -y unzip && \
@@ -9,7 +9,7 @@ RUN apt-get update && \
 
 WORKDIR /
 RUN mkdir /app
-ADD https://github.com/gophish/gophish/releases/download/$RELEASE/gophish-v$RELEASE-linux-64bit.zip /app/
+ADD https://github.com/gophish/gophish/releases/download/$RELEASE/gophish-$RELEASE-linux-64bit.zip /app/
 WORKDIR /app
 RUN unzip /app/gophish-v$RELEASE-linux-64bit.zip && rm /app/gophish-v$RELEASE-linux-64bit.zip
 RUN sed -i "s|127.0.0.1|0.0.0.0|g" config.json
