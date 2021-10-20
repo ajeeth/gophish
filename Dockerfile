@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 MAINTAINER Ajeeth.Samuel@gmail.com
 
-ENV RELEASE v0.8.0
+ENV RELEASE v0.11.0
 
 RUN apt-get update && \
 	apt-get install -y unzip && \
