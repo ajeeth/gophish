@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 MAINTAINER Ajeeth.Samuel@gmail.com
 
 ENV RELEASE v0.11.0
